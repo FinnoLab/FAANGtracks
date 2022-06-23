@@ -1,0 +1,8 @@
+track genes
+compositeTrack on
+shortLabel FAANG genes
+longLabel FAANG annotated genes
+type bigGenePred
+visibility pack
+baseColorDefault genomicCodons
+bigDataUrl bigBed/genePred/faang_genePred.bb
