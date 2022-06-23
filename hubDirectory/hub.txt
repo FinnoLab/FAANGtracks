@@ -1,0 +1,5 @@
+hub Equine Functional Annotation
+shortLabel FAANG
+longLabel equineFAANG
+genomesFile genomes.txt
+email  scpeng@ucdavis.edu

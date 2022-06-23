@@ -1,0 +1,2 @@
+genome equCab3
+trackDb equCab3/trackDb.txt
