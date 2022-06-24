@@ -62,7 +62,7 @@ superTrack on
     type bigBed 6 +
     shortLabel Liver ATAC
     longLabel Liver open chromatin regions
-    visibility full
+    visibility pack
     labelOnFeature off
     exonArrows off
     exonNumbers off
@@ -245,7 +245,7 @@ superTrack on
     type bigBed 6 +
     shortLabel Adipose ATAC
     longLabel Adipose open chromatin regions
-    visibility full
+    visibility pack
     labelOnFeature off
     exonArrows off
     exonNumbers off
