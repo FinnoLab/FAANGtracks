@@ -188,3 +188,186 @@ superTrack on
         type bigWig -337 2905
         color 120,235,204
         bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K27ac_Liver_combined.bw
+
+track Adipose
+shortLabel Adipose
+longLabel Adipose transcriptome and epigenome
+superTrack on
+
+    track Adipose_chromHMM
+    type bigBed 12
+    parent Adipose
+    shortLabel Adipose States
+    longLabel Adipose chromatin state annotation
+    visibility pack
+    bigDataUrl bigBed/ChromHMM/Adipose_expanded.bigBed
+    itemRgb on
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
+    
+    track Adipose_RNAseq
+    compositeTrack on
+    parent Adipose
+    shortLabel Adipose RNA
+    longLabel RNA-seq data for Adipose in four animals
+    type bam
+    pairEndsByName on
+    maxWindowToDraw 1000000
+    autoScale group
+    doWiggle on
+    
+        track Adipose_AH1
+        parent Adipose_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH1/RNA-Seq/AdiposeLoin/AH1_AdiposeLoin.markDup.bam
+        
+        track Adipose_AH2
+        parent Adipose_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH2/RNA-Seq/AdiposeLoin/AH2_AdiposeLoin.markDup.bam
+        
+        track Adipose_AH3
+        parent Adipose_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH3/RNA-Seq/AdiposeLoin/AH3_Adipose.markDup.bam
+        
+        track Adipose_AH4
+        parent Adipose_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH4/RNA-Seq/Adipose/AH4_Adipose.markDup.bam
+    
+    
+
+    track Adipose_ATAC
+    compositeTrack on
+    parent Adipose
+    type bigBed 6 +
+    shortLabel Adipose ATAC
+    longLabel Adipose open chromatin regions
+    visibility full
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
+
+        track Adipose_ATAC_all
+        parent Adipose_ATAC on
+        type bigBed 6 +
+        shortLabel Adipose ATAC all
+        longLabel All open chromatin peaks in Adipose
+        bigDataUrl bigBed/ATAC/Adipose.bigBed
+
+        track Adipose_ATAC_specific
+        parent Adipose_ATAC
+        type bigBed 6 +
+        shortLabel Adipose ATAC specific
+        longLabel Adipose specific open chromatin peaks
+        bigDataUrl bigBed/ATAC/Adipose_specific.bigBed
+    
+    track Adipose_H3K4me1
+    parent Adipose
+    container multiWig
+    shortLabel Adipose H3K4me1
+    longLabel Adipose ChIP-seq data for H3K4me1
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Adipose_H3K4me1_F
+        parent Adipose_H3K4me1
+        type bigWig -73 201
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K4me1_Adipose_Combined.bigWig
+
+        track Adipose_H3K4me1_M
+        parent Adipose_H3K4me1
+        type bigWig -563 1255
+        color 120,235,204
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K4me1_Adipose_combined.bw
+        
+    track Adipose_H3K4me3
+    parent Adipose
+    container multiWig
+    shortLabel Adipose H3K4me3
+    longLabel Adipose ChIP-seq data for H3K4me3
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale  group
+    type bigWig -100 1000
+
+        track Adipose_H3K4me3_F
+        parent Adipose_H3K4me3
+        type bigWig -42 352
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K4me3_Adipose_Combined.bigWig
+
+        track Adipose_H3K4me3_M
+        parent Adipose_H3K4me3
+        type bigWig -202 4790
+        color 120,235,204
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K4me3_Adipose_combined.bw
+        
+    track Adipose_H3K27me3
+    parent Adipose
+    container multiWig
+    shortLabel Adipose H3K27me3
+    longLabel Adipose ChIP-seq data for H3K27me3
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale  group
+    type bigWig -100 1000
+
+        track Adipose_H3K27me3_F
+        parent Adipose_H3K27me3
+        type bigWig -143 104
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K27me3_Adipose_Combined.bigWig
+
+        track Adipose_H3K27me3_M
+        parent Adipose_H3K27me3
+        type bigWig -1167 5376
+        color 120,235,204
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K27me3_Adipose_combined.bw
+        
+    track Adipose_H3K27ac
+    parent Adipose
+    container multiWig
+    shortLabel Adipose H3K27ac
+    longLabel Adipose ChIP-seq data for H3K27ac
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale  group
+    type bigWig -100 1000
+
+        track Adipose_H3K27ac_F
+        parent Adipose_H3K27ac
+        type bigWig -48 281
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K27ac_Adipose_Combined.bigWig
+
+        track Adipose_H3K27ac_M
+        parent Adipose_H3K27ac
+        type bigWig -291 3928
+        color 120,235,204
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K27ac_Adipose_combined.bw
