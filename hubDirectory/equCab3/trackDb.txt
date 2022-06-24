@@ -56,20 +56,20 @@ superTrack on
     aggregate stacked
     visibility full
     maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
     graphTypeDefault bar
     maxWindowToQuery 1000000
     smoothingWindow 4
-    type bigWig -1000 5000
 
         track Liver_H3K4me1_F
         parent Liver_H3K4me1
-        autoScale group
-        alwaysZero on
+        type bigWig -108 375
+        color 255,128,128
         bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K4me1_Liver_Combined.bigWig
 
         track Liver_H3K4me1_M
         parent Liver_H3K4me1
-        autoScale group
-        alwaysZero on
+        type bigWig -359 3712
+        color 120,235,204
         bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K4me1_Liver_combined.bw
         
