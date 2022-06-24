@@ -17,7 +17,7 @@ superTrack on
   shortLabel Liver States
   longLabel Liver chromatin state annotation
   visibility squish
-  bigDataUrl equCab3/bigBed/ChromHMM/Liver_expanded.bigBed
+  bigDataUrl bigBed/ChromHMM/Liver_expanded.bigBed
   itemRgb on
   labelOnFeature on
   exonArrows off
@@ -38,10 +38,10 @@ superTrack on
     parent Liver_ATAC on
     shortLabel Liver ATAC all
     longLabel All open chromatin peaks in liver
-    bigDataUrl equCab3/bigBed/ATAC/Liver.bigBed
+    bigDataUrl bigBed/ATAC/Liver.bigBed
 
     track Liver_ATAC_specific
     parent Liver_ATAC
     shortLabel Liver ATAC specific
     longLabel Liver specific open chromatin peaks
-    bigDataUrl equCab3/bigBed/ATAC/Liver_specific.bigBed
+    bigDataUrl bigBed/ATAC/Liver_specific.bigBed
