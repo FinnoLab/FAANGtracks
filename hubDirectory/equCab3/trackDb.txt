@@ -49,6 +49,7 @@ superTrack on
         bigDataUrl bigBed/ATAC/Liver_specific.bigBed
     
     track Liver_H3K4me1
+    parent Liver
     container multiWig
     shortLabel Liver H3K4me1
     longLabel Liver ChIP-seq data for H3K4me1
