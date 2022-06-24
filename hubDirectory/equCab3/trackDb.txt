@@ -31,7 +31,7 @@ superTrack on
     type bam
     visibility full
     pairEndsByName on
-    maxWindowToDraw 1000000
+    maxWindowToDraw 5000000
     maxHeightPixels 100:30:12
     autoScale group
     doWiggle on
@@ -216,7 +216,7 @@ superTrack on
     type bam
     visibility full
     pairEndsByName on
-    maxWindowToDraw 1000000
+    maxWindowToDraw 5000000
     maxHeightPixels 100:30:12
     autoScale group
     doWiggle on
@@ -401,7 +401,7 @@ superTrack on
     type bam
     visibility full
     pairEndsByName on
-    maxWindowToDraw 1000000
+    maxWindowToDraw 5000000
     maxHeightPixels 100:30:12
     autoScale group
     doWiggle on
