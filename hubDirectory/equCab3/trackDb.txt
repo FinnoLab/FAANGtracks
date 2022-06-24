@@ -6,6 +6,12 @@ visibility pack
 baseColorDefault genomicCodons
 bigDataUrl bigBed/genePred/faang_genePred.bb
 
+track JP_TB_SNPs
+shortLabel JP TB SNPs
+longLabel SNPs data generated from 101 Japanese Thoroughbreds
+type vcfTabix
+bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/JapaneseThoroughbreds.vcf.gz
+
 track Liver
 shortLabel Liver
 longLabel Liver transcriptome and epigenome
