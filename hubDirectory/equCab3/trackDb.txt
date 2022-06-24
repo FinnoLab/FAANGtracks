@@ -48,17 +48,28 @@ superTrack on
         longLabel Liver specific open chromatin peaks
         bigDataUrl bigBed/ATAC/Liver_specific.bigBed
     
+    track Liver_H3K4me1
+    parent Liver
+    container multiWig
+    shortLabel Liver H3K4me1
+    longLabel Liver ChIP-seq data for H3K4me1
+    aggregate stacked
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+
         track Liver_H3K4me1_F
+        parent Liver_H3K4me1
         type bigWig -108 375
-        shortLabel Liver_H3K4me1_F
-        longLabel Liver_H3K4me1_F
         color 255,128,128
         bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K4me1_Liver_Combined.bigWig
 
         track Liver_H3K4me1_M
+        parent Liver_H3K4me1
         type bigWig -359 3712
-        shortLabel Liver_H3K4me1_M
-        longLabel Liver_H3K4me1_M
         color 120,235,204
         bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K4me1_Liver_combined.bw
         
