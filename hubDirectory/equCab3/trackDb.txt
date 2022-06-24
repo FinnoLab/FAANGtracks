@@ -745,3 +745,188 @@ superTrack on
         type bigWig -1069 1472
         color 120,235,204
         bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K27ac_Brain_combined.bw
+        
+track Heart
+shortLabel Heart
+longLabel Heart transcriptome and epigenome, derived from left ventricle
+superTrack on
+
+    track Heart_chromHMM
+    type bigBed 12
+    parent Heart
+    shortLabel Heart States
+    longLabel Heart chromatin state annotation
+    visibility pack
+    bigDataUrl bigBed/ChromHMM/Heart_expanded.bigBed
+    itemRgb on
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
+    
+    track Heart_RNAseq
+    compositeTrack on
+    parent Heart
+    shortLabel Heart RNA
+    longLabel RNA-seq data for Heart (left ventricle) in four animals
+    type bam
+    visibility full
+    pairEndsByName on
+    maxWindowToDraw 5000000
+    maxHeightPixels 100:30:12
+    autoScale group
+    doWiggle on
+    
+        track Heart_AH1
+        parent Heart_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH1/RNA-Seq/LeftVentricle/AH1_LeftVentricle.markDup.bam
+        
+        track Heart_AH2
+        parent Heart_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH2/RNA-Seq/LeftVentricle/AH2_LeftVentricle.markDup.bam
+        
+        track Heart_AH3
+        parent Heart_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH3/RNA-Seq/Heart/AH3_Heart.markDup.bam
+        
+        track Heart_AH4
+        parent Heart_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH4/RNA-Seq/Heart/AH4_Heart.markDup.bam
+    
+    
+
+    track Heart_ATAC
+    compositeTrack on
+    parent Heart
+    type bigBed 6 +
+    shortLabel Heart ATAC
+    longLabel Heart (left ventricle) open chromatin regions
+    visibility pack
+    labelFields none
+    exonArrows off
+    exonNumbers off
+
+        track Heart_ATAC_all
+        parent Heart_ATAC on
+        type bigBed 6 +
+        shortLabel Heart ATAC all
+        longLabel All open chromatin peaks in Heart
+        bigDataUrl bigBed/ATAC/Heart.bigBed
+
+        track Heart_ATAC_specific
+        parent Heart_ATAC
+        type bigBed 6 +
+        shortLabel Heart ATAC specific
+        longLabel Heart specific open chromatin peaks
+        bigDataUrl bigBed/ATAC/Heart_specific.bigBed
+    
+    track Heart_H3K4me1
+    parent Heart
+    container multiWig
+    shortLabel Heart H3K4me1
+    longLabel Heart (left ventricle) ChIP-seq data for H3K4me1
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Heart_H3K4me1_F
+        parent Heart_H3K4me1
+        type bigWig -71 218
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K4me1_Heart_Combined.bigWig
+
+        track Heart_H3K4me1_M
+        parent Heart_H3K4me1
+        type bigWig -1708 954
+        color 120,235,204
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K4me1_Heart_combined.bw
+        
+    track Heart_H3K4me3
+    parent Heart
+    container multiWig
+    shortLabel Heart H3K4me3
+    longLabel Heart (left ventricle) ChIP-seq data for H3K4me3
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Heart_H3K4me3_F
+        parent Heart_H3K4me3
+        type bigWig -9 609
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K4me3_Heart_Combined.bigWig
+
+        track Heart_H3K4me3_M
+        parent Heart_H3K4me3
+        type bigWig -510 6442
+        color 120,235,204
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K4me3_Heart_combined.bw
+        
+    track Heart_H3K27me3
+    parent Heart
+    container multiWig
+    shortLabel Heart H3K27me3
+    longLabel Heart (left ventricle) ChIP-seq data for H3K27me3
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Heart_H3K27me3_F
+        parent Heart_H3K27me3
+        type bigWig -170 281
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K27me3_Heart_Combined.bigWig
+
+        track Heart_H3K27me3_M
+        parent Heart_H3K27me3
+        type bigWig -3123 6681
+        color 120,235,204
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K27me3_Heart_combined.bw
+        
+    track Heart_H3K27ac
+    parent Heart
+    container multiWig
+    shortLabel Heart H3K27ac
+    longLabel Heart (left ventricle) ChIP-seq data for H3K27ac
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Heart_H3K27ac_F
+        parent Heart_H3K27ac
+        type bigWig -21 416
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K27ac_Heart_Combined.bigWig
+
+        track Heart_H3K27ac_M
+        parent Heart_H3K27ac
+        type bigWig -853 2996
+        color 120,235,204
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K27ac_Heart_combined.bw
