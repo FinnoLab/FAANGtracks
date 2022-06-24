@@ -32,6 +32,7 @@ superTrack on
     visibility full
     pairEndsByName on
     maxWindowToDraw 1000000
+    maxHeightPixels 100:30:12
     autoScale group
     doWiggle on
     
@@ -216,6 +217,7 @@ superTrack on
     visibility full
     pairEndsByName on
     maxWindowToDraw 1000000
+    maxHeightPixels 100:30:12
     autoScale group
     doWiggle on
     
