@@ -1449,3 +1449,152 @@ superTrack on
         type bigWig -45 292
         color 255,128,128
         bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K27ac_Ovary_Combined.bigWig
+        
+track Testis
+shortLabel Testis
+longLabel Testis transcriptome and epigenome
+superTrack on
+
+    track Testis_chromHMM
+    type bigBed 12
+    parent Testis
+    shortLabel Testis States
+    longLabel Testis chromatin state annotation
+    visibility pack
+    bigDataUrl bigBed/ChromHMM/Testis_expanded.bigBed
+    itemRgb on
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
+    
+    track Testis_RNAseq
+    compositeTrack on
+    parent Testis
+    shortLabel Testis RNA
+    longLabel RNA-seq data for Testis in two male animals
+    type bam
+    visibility full
+    pairEndsByName on
+    maxWindowToDraw 5000000
+    maxHeightPixels 100:30:12
+    autoScale group
+    doWiggle on
+    
+        track Testis_AH3
+        parent Testis_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH3/RNA-Seq/LeftTestis/AH3_LeftTestis.markDup.bam
+        
+        track Testis_AH4
+        parent Testis_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH4/RNA-Seq/LeftTestis/AH4_LeftTestis.markDup.bam
+
+    track Testis_ATAC
+    compositeTrack on
+    parent Testis
+    type bigBed 6 +
+    shortLabel Testis ATAC
+    longLabel Testis open chromatin regions
+    visibility pack
+    labelFields none
+    exonArrows off
+    exonNumbers off
+
+        track Testis_ATAC_all
+        parent Testis_ATAC on
+        type bigBed 6 +
+        shortLabel Testis ATAC all
+        longLabel All open chromatin peaks in Testis
+        bigDataUrl bigBed/ATAC/Testis.bigBed
+
+        track Testis_ATAC_specific
+        parent Testis_ATAC
+        type bigBed 6 +
+        shortLabel Testis ATAC specific
+        longLabel Testis specific open chromatin peaks
+        bigDataUrl bigBed/ATAC/Testis_specific.bigBed
+    
+    track Testis_H3K4me1
+    parent Testis
+    container multiWig
+    shortLabel Testis H3K4me1
+    longLabel Testis ChIP-seq data for H3K4me1
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Testis_H3K4me1_M
+        parent Testis_H3K4me1
+        type bigWig -1370 4681
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K4me1_Testis_combined.bw
+        
+    track Testis_H3K4me3
+    parent Testis
+    container multiWig
+    shortLabel Testis H3K4me3
+    longLabel Testis ChIP-seq data for H3K4me3
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Testis_H3K4me3_M
+        parent Testis_H3K4me3
+        type bigWig -90 5135
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K4me3_Testis_combined.bw
+        
+    track Testis_H3K27me3
+    parent Testis
+    container multiWig
+    shortLabel Testis H3K27me3
+    longLabel Testis ChIP-seq data for H3K27me3
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Testis_H3K27me3_M
+        parent Testis_H3K27me3
+        type bigWig -210 7497
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K27me3_Testis_combined.bw
+        
+    track Testis_H3K27ac
+    parent Testis
+    container multiWig
+    shortLabel Testis H3K27ac
+    longLabel Testis ChIP-seq data for H3K27ac
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Testis_H3K27ac_M
+        parent Testis_H3K27ac
+        type bigWig -847 1841
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K27ac_Testis_combined.bw
