@@ -1300,3 +1300,152 @@ superTrack on
         type bigWig -332 3722
         color 120,235,204
         bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K27ac_Muscle_combined.bw
+        
+track Ovary
+shortLabel Ovary
+longLabel Ovary transcriptome and epigenome
+superTrack on
+
+    track Ovary_chromHMM
+    type bigBed 12
+    parent Ovary
+    shortLabel Ovary States
+    longLabel Ovary chromatin state annotation
+    visibility pack
+    bigDataUrl bigBed/ChromHMM/Ovary_expanded.bigBed
+    itemRgb on
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
+    
+    track Ovary_RNAseq
+    compositeTrack on
+    parent Ovary
+    shortLabel Ovary RNA
+    longLabel RNA-seq data for Ovary in two female animals
+    type bam
+    visibility full
+    pairEndsByName on
+    maxWindowToDraw 5000000
+    maxHeightPixels 100:30:12
+    autoScale group
+    doWiggle on
+    
+        track Ovary_AH1
+        parent Ovary_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH1/RNA-Seq/Ovary/AH1_Ovary.markDup.bam
+        
+        track Ovary_AH2
+        parent Ovary_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH2/RNA-Seq/Ovary/AH2_Ovary.markDup.bam
+
+    track Ovary_ATAC
+    compositeTrack on
+    parent Ovary
+    type bigBed 6 +
+    shortLabel Ovary ATAC
+    longLabel Ovary open chromatin regions
+    visibility pack
+    labelFields none
+    exonArrows off
+    exonNumbers off
+
+        track Ovary_ATAC_all
+        parent Ovary_ATAC on
+        type bigBed 6 +
+        shortLabel Ovary ATAC all
+        longLabel All open chromatin peaks in Ovary
+        bigDataUrl bigBed/ATAC/Ovary.bigBed
+
+        track Ovary_ATAC_specific
+        parent Ovary_ATAC
+        type bigBed 6 +
+        shortLabel Ovary ATAC specific
+        longLabel Ovary specific open chromatin peaks
+        bigDataUrl bigBed/ATAC/Ovary_specific.bigBed
+    
+    track Ovary_H3K4me1
+    parent Ovary
+    container multiWig
+    shortLabel Ovary H3K4me1
+    longLabel Ovary ChIP-seq data for H3K4me1
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Ovary_H3K4me1_F
+        parent Ovary_H3K4me1
+        type bigWig -76 212
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K4me1_Ovary_Combined.bigWig
+        
+    track Ovary_H3K4me3
+    parent Ovary
+    container multiWig
+    shortLabel Ovary H3K4me3
+    longLabel Ovary ChIP-seq data for H3K4me3
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Ovary_H3K4me3_F
+        parent Ovary_H3K4me3
+        type bigWig -25 368
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K4me3_Ovary_Combined.bigWig
+        
+    track Ovary_H3K27me3
+    parent Ovary
+    container multiWig
+    shortLabel Ovary H3K27me3
+    longLabel Ovary ChIP-seq data for H3K27me3
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Ovary_H3K27me3_F
+        parent Ovary_H3K27me3
+        type bigWig -164 217
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K27me3_Ovary_Combined.bigWig
+        
+    track Ovary_H3K27ac
+    parent Ovary
+    container multiWig
+    shortLabel Ovary H3K27ac
+    longLabel Ovary ChIP-seq data for H3K27ac
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Ovary_H3K27ac_F
+        parent Ovary_H3K27ac
+        type bigWig -45 292
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K27ac_Ovary_Combined.bigWig
