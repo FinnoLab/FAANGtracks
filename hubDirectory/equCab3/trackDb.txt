@@ -29,6 +29,7 @@ superTrack on
     shortLabel Liver RNA
     longLabel RNA-seq data for Liver in four animals
     type bam
+    visibility full
     pairEndsByName on
     maxWindowToDraw 1000000
     autoScale group
@@ -120,7 +121,7 @@ superTrack on
     graphTypeDefault bar
     maxWindowToQuery 1000000
     smoothingWindow 4
-    autoScale  group
+    autoScale group
     type bigWig -100 1000
 
         track Liver_H3K4me3_F
@@ -147,7 +148,7 @@ superTrack on
     graphTypeDefault bar
     maxWindowToQuery 1000000
     smoothingWindow 4
-    autoScale  group
+    autoScale group
     type bigWig -100 1000
 
         track Liver_H3K27me3_F
@@ -174,7 +175,7 @@ superTrack on
     graphTypeDefault bar
     maxWindowToQuery 1000000
     smoothingWindow 4
-    autoScale  group
+    autoScale group
     type bigWig -100 1000
 
         track Liver_H3K27ac_F
@@ -212,6 +213,7 @@ superTrack on
     shortLabel Adipose RNA
     longLabel RNA-seq data for Adipose in four animals
     type bam
+    visibility full
     pairEndsByName on
     maxWindowToDraw 1000000
     autoScale group
@@ -303,7 +305,7 @@ superTrack on
     graphTypeDefault bar
     maxWindowToQuery 1000000
     smoothingWindow 4
-    autoScale  group
+    autoScale group
     type bigWig -100 1000
 
         track Adipose_H3K4me3_F
@@ -330,7 +332,7 @@ superTrack on
     graphTypeDefault bar
     maxWindowToQuery 1000000
     smoothingWindow 4
-    autoScale  group
+    autoScale group
     type bigWig -100 1000
 
         track Adipose_H3K27me3_F
@@ -357,7 +359,7 @@ superTrack on
     graphTypeDefault bar
     maxWindowToQuery 1000000
     smoothingWindow 4
-    autoScale  group
+    autoScale group
     type bigWig -100 1000
 
         track Adipose_H3K27ac_F
