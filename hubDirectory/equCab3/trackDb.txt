@@ -30,7 +30,7 @@ superTrack on
     shortLabel Liver ATAC
     longLabel Liver open chromatin regions
     visibility dense
-    labelOnFeature on
+    labelOnFeature off
     exonArrows off
     exonNumbers off
 
