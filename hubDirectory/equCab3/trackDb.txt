@@ -16,7 +16,7 @@ superTrack on
     parent Liver
     shortLabel Liver States
     longLabel Liver chromatin state annotation
-    visibility squish
+    visibility pack
     bigDataUrl bigBed/ChromHMM/Liver_expanded.bigBed
     itemRgb on
     labelOnFeature off
