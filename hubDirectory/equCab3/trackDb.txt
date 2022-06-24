@@ -11,37 +11,37 @@ shortLabel Liver
 longLabel Liver transcriptome and epigenome
 superTrack on
 
-  track Liver_chromHMM
-  type bigBed 12
-  parent Liver
-  shortLabel Liver States
-  longLabel Liver chromatin state annotation
-  visibility squish
-  bigDataUrl bigBed/ChromHMM/Liver_expanded.bigBed
-  itemRgb on
-  labelOnFeature on
-  exonArrows off
-  exonNumbers off
+    track Liver_chromHMM
+    type bigBed 12
+    parent Liver
+    shortLabel Liver States
+    longLabel Liver chromatin state annotation
+    visibility squish
+    bigDataUrl bigBed/ChromHMM/Liver_expanded.bigBed
+    itemRgb on
+    labelOnFeature on
+    exonArrows off
+    exonNumbers off
 
-  track Liver_ATAC
-  compositeTrack on
-  parent Liver
-  type bigBed 6 +
-  shortLabel Liver ATAC
-  longLabel Liver open chromatin regions
-  visibility dense
-  labelOnFeature on
-  exonArrows off
-  exonNumbers off
+    track Liver_ATAC
+    compositeTrack on
+    parent Liver
+    type bigBed 6 +
+    shortLabel Liver ATAC
+    longLabel Liver open chromatin regions
+    visibility dense
+    labelOnFeature on
+    exonArrows off
+    exonNumbers off
 
-    track Liver_ATAC_all
-    parent Liver_ATAC on
-    shortLabel Liver ATAC all
-    longLabel All open chromatin peaks in liver
-    bigDataUrl bigBed/ATAC/Liver.bigBed
+        track Liver_ATAC_all
+        parent Liver_ATAC on
+        shortLabel Liver ATAC all
+        longLabel All open chromatin peaks in liver
+        bigDataUrl bigBed/ATAC/Liver.bigBed
 
-    track Liver_ATAC_specific
-    parent Liver_ATAC
-    shortLabel Liver ATAC specific
-    longLabel Liver specific open chromatin peaks
-    bigDataUrl bigBed/ATAC/Liver_specific.bigBed
+        track Liver_ATAC_specific
+        parent Liver_ATAC
+        shortLabel Liver ATAC specific
+        longLabel Liver specific open chromatin peaks
+        bigDataUrl bigBed/ATAC/Liver_specific.bigBed
