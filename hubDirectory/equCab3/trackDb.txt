@@ -54,8 +54,12 @@ superTrack on
     shortLabel Liver H3K4me1
     longLabel Liver ChIP-seq data for H3K4me1
     aggregate stacked
-    visibility dense
-    type bigWig -5000 5000
+    visibility full
+    maxHeightPixels 100:30:12
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    type bigWig -1000 5000
 
         track Liver_H3K4me1_F
         parent Liver_H3K4me1
