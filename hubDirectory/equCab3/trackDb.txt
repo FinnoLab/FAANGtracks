@@ -1,8 +1,47 @@
 track genes
-compositeTrack on
 shortLabel FAANG genes
 longLabel FAANG annotated genes
 type bigGenePred
 visibility pack
 baseColorDefault genomicCodons
 bigDataUrl bigBed/genePred/faang_genePred.bb
+
+track Liver
+shortLabel Liver
+longLabel Liver transcriptome and epigenome
+superTrack on
+
+  track Liver_chromHMM
+  type bigBed 12
+  parent Liver
+  shortLabel Liver States
+  longLabel Liver chromatin state annotation
+  visibility squish
+  bigDataUrl equCab3/bigBed/ChromHMM/Liver_expanded.bigBed
+  itemRgb on
+  labelOnFeature on
+  exonArrows off
+  exonNumbers off
+
+  track Liver_ATAC
+  compositeTrack on
+  parent Liver
+  type bigBed 6+2
+  shortLabel Liver ATAC
+  longLabel Liver open chromatin regions
+  visibility dense
+  labelOnFeature on
+  exonArrows off
+  exonNumbers off
+
+    track Liver_ATAC_all
+    parent Liver_ATAC
+    shortLabel Liver ATAC all
+    longLabel All open chromatin peaks in liver
+    bigDataUrl equCab3/bigBed/ATAC/Liver.bigBed
+
+    track Liver_ATAC_specific
+    parent Liver_ATAC
+    shortLabel Liver ATAC specific
+    longLabel Liver specific open chromatin peaks
+    bigDataUrl equCab3/bigBed/ATAC/Liver_specific.bigBed
