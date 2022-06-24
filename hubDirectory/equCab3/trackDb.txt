@@ -375,3 +375,188 @@ superTrack on
         type bigWig -291 3928
         color 120,235,204
         bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K27ac_Adipose_combined.bw
+        
+track Lung
+shortLabel Lung
+longLabel Lung transcriptome and epigenome
+superTrack on
+
+    track Lung_chromHMM
+    type bigBed 12
+    parent Lung
+    shortLabel Lung States
+    longLabel Lung chromatin state annotation
+    visibility pack
+    bigDataUrl bigBed/ChromHMM/Lung_expanded.bigBed
+    itemRgb on
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
+    
+    track Lung_RNAseq
+    compositeTrack on
+    parent Lung
+    shortLabel Lung RNA
+    longLabel RNA-seq data for Lung in four animals
+    type bam
+    visibility full
+    pairEndsByName on
+    maxWindowToDraw 1000000
+    maxHeightPixels 100:30:12
+    autoScale group
+    doWiggle on
+    
+        track Lung_AH1
+        parent Lung_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH1/RNA-Seq/Lung/AH1_Lung.markDup.bam
+        
+        track Lung_AH2
+        parent Lung_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH2/RNA-Seq/Lung/AH2_Lung.markDup.bam
+        
+        track Lung_AH3
+        parent Lung_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH3/RNA-Seq/Lung/AH3_Lung.markDup.bam
+        
+        track Lung_AH4
+        parent Lung_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH4/RNA-Seq/Lung/AH4_Lung.markDup.bam
+    
+    
+
+    track Lung_ATAC
+    compositeTrack on
+    parent Lung
+    type bigBed 6 +
+    shortLabel Lung ATAC
+    longLabel Lung open chromatin regions
+    visibility pack
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
+
+        track Lung_ATAC_all
+        parent Lung_ATAC on
+        type bigBed 6 +
+        shortLabel Lung ATAC all
+        longLabel All open chromatin peaks in Lung
+        bigDataUrl bigBed/ATAC/Lung.bigBed
+
+        track Lung_ATAC_specific
+        parent Lung_ATAC
+        type bigBed 6 +
+        shortLabel Lung ATAC specific
+        longLabel Lung specific open chromatin peaks
+        bigDataUrl bigBed/ATAC/Lung_specific.bigBed
+    
+    track Lung_H3K4me1
+    parent Lung
+    container multiWig
+    shortLabel Lung H3K4me1
+    longLabel Lung ChIP-seq data for H3K4me1
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Lung_H3K4me1_F
+        parent Lung_H3K4me1
+        type bigWig -116 160
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K4me1_Lung_Combined.bigWig
+
+        track Lung_H3K4me1_M
+        parent Lung_H3K4me1
+        type bigWig -687 1759
+        color 120,235,204
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K4me1_Lung_combined.bw
+        
+    track Lung_H3K4me3
+    parent Lung
+    container multiWig
+    shortLabel Lung H3K4me3
+    longLabel Lung ChIP-seq data for H3K4me3
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Lung_H3K4me3_F
+        parent Lung_H3K4me3
+        type bigWig -32 347
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K4me3_Lung_Combined.bigWig
+
+        track Lung_H3K4me3_M
+        parent Lung_H3K4me3
+        type bigWig -30 6685
+        color 120,235,204
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K4me3_Lung_combined.bw
+        
+    track Lung_H3K27me3
+    parent Lung
+    container multiWig
+    shortLabel Lung H3K27me3
+    longLabel Lung ChIP-seq data for H3K27me3
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Lung_H3K27me3_F
+        parent Lung_H3K27me3
+        type bigWig -120 140
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K27me3_Lung_Combined.bigWig
+
+        track Lung_H3K27me3_M
+        parent Lung_H3K27me3
+        type bigWig -1594 5578
+        color 120,235,204
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K27me3_Lung_combined.bw
+        
+    track Lung_H3K27ac
+    parent Lung
+    container multiWig
+    shortLabel Lung H3K27ac
+    longLabel Lung ChIP-seq data for H3K27ac
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Lung_H3K27ac_F
+        parent Lung_H3K27ac
+        type bigWig -56 243
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K27ac_Lung_Combined.bigWig
+
+        track Lung_H3K27ac_M
+        parent Lung_H3K27ac
+        type bigWig -779 3366
+        color 120,235,204
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K27ac_Lung_combined.bw
