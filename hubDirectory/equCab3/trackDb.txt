@@ -560,3 +560,188 @@ superTrack on
         type bigWig -779 3366
         color 120,235,204
         bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K27ac_Lung_combined.bw
+        
+track Brain
+shortLabel Brain
+longLabel Brain transcriptome and epigenome, derived from parietal cortex
+superTrack on
+
+    track Brain_chromHMM
+    type bigBed 12
+    parent Brain
+    shortLabel Brain States
+    longLabel Brain chromatin state annotation
+    visibility pack
+    bigDataUrl bigBed/ChromHMM/Cortex_expanded.bigBed
+    itemRgb on
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
+    
+    track Brain_RNAseq
+    compositeTrack on
+    parent Brain
+    shortLabel Brain RNA
+    longLabel RNA-seq data for Brain (parietal cortex) in four animals
+    type bam
+    visibility full
+    pairEndsByName on
+    maxWindowToDraw 5000000
+    maxHeightPixels 100:30:12
+    autoScale group
+    doWiggle on
+    
+        track Brain_AH1
+        parent Brain_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH1/RNA-Seq/ParietalCortex/AH1_ParietalCortex.markDup.bam
+        
+        track Brain_AH2
+        parent Brain_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH2/RNA-Seq/ParietalCortex/AH2_ParietalCortex.markDup.bam
+        
+        track Brain_AH3
+        parent Brain_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH3/RNA-Seq/Brain/AH3_Brain.markDup.bam
+        
+        track Brain_AH4
+        parent Brain_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH4/RNA-Seq/Brain/AH4_Brain.markDup.bam
+    
+    
+
+    track Brain_ATAC
+    compositeTrack on
+    parent Brain
+    type bigBed 6 +
+    shortLabel Brain ATAC
+    longLabel Brain (parietal cortex) open chromatin regions
+    visibility pack
+    labelFields none
+    exonArrows off
+    exonNumbers off
+
+        track Brain_ATAC_all
+        parent Brain_ATAC on
+        type bigBed 6 +
+        shortLabel Brain ATAC all
+        longLabel All open chromatin peaks in Brain
+        bigDataUrl bigBed/ATAC/Cortex.bigBed
+
+        track Brain_ATAC_specific
+        parent Brain_ATAC
+        type bigBed 6 +
+        shortLabel Brain ATAC specific
+        longLabel Brain specific open chromatin peaks
+        bigDataUrl bigBed/ATAC/Cortex_specific.bigBed
+    
+    track Brain_H3K4me1
+    parent Brain
+    container multiWig
+    shortLabel Brain H3K4me1
+    longLabel Brain (parietal cortex) ChIP-seq data for H3K4me1
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Brain_H3K4me1_F
+        parent Brain_H3K4me1
+        type bigWig -116 249
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K4me1_Brain_Combined.bigWig
+
+        track Brain_H3K4me1_M
+        parent Brain_H3K4me1
+        type bigWig -1704 702
+        color 120,235,204
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K4me1_Brain_combined.bw
+        
+    track Brain_H3K4me3
+    parent Brain
+    container multiWig
+    shortLabel Brain H3K4me3
+    longLabel Brain (parietal cortex) ChIP-seq data for H3K4me3
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Brain_H3K4me3_F
+        parent Brain_H3K4me3
+        type bigWig -27 629
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K4me3_Brain_Combined.bigWig
+
+        track Brain_H3K4me3_M
+        parent Brain_H3K4me3
+        type bigWig -624 5711
+        color 120,235,204
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K4me3_Brain_combined.bw
+        
+    track Brain_H3K27me3
+    parent Brain
+    container multiWig
+    shortLabel Brain H3K27me3
+    longLabel Brain (parietal cortex) ChIP-seq data for H3K27me3
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Brain_H3K27me3_F
+        parent Brain_H3K27me3
+        type bigWig -160 177
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K27me3_Brain_Combined.bigWig
+
+        track Brain_H3K27me3_M
+        parent Brain_H3K27me3
+        type bigWig -2525 4591
+        color 120,235,204
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K27me3_Brain_combined.bw
+        
+    track Brain_H3K27ac
+    parent Brain
+    container multiWig
+    shortLabel Brain H3K27ac
+    longLabel Brain (parietal cortex) ChIP-seq data for H3K27ac
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Brain_H3K27ac_F
+        parent Brain_H3K27ac
+        type bigWig -73 315
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K27ac_Brain_Combined.bigWig
+
+        track Brain_H3K27ac_M
+        parent Brain_H3K27ac
+        type bigWig -1069 1472
+        color 120,235,204
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K27ac_Brain_combined.bw
