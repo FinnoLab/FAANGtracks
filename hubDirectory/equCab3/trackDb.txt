@@ -60,6 +60,7 @@ superTrack on
     graphTypeDefault bar
     maxWindowToQuery 1000000
     smoothingWindow 4
+    autoScale group
     type bigWig -100 1000
 
         track Liver_H3K4me1_F
@@ -86,11 +87,12 @@ superTrack on
     graphTypeDefault bar
     maxWindowToQuery 1000000
     smoothingWindow 4
+    autoScale  group
     type bigWig -100 1000
 
         track Liver_H3K4me3_F
         parent Liver_H3K4me3
-        type bigWig -108 375
+        type bigWig -19 537
         color 255,128,128
         bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K4me3_Liver_Combined.bigWig
 
