@@ -36,12 +36,14 @@ superTrack on
 
         track Liver_ATAC_all
         parent Liver_ATAC on
+        type bigBed 6 +
         shortLabel Liver ATAC all
         longLabel All open chromatin peaks in liver
         bigDataUrl bigBed/ATAC/Liver.bigBed
 
         track Liver_ATAC_specific
         parent Liver_ATAC
+        type bigBed 6 +
         shortLabel Liver ATAC specific
         longLabel Liver specific open chromatin peaks
         bigDataUrl bigBed/ATAC/Liver_specific.bigBed
