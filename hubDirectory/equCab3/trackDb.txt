@@ -36,18 +36,22 @@ superTrack on
     
         track Liver_AH1
         parent Liver_RNAseq
+        type bam
         bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH1/RNA-Seq/Liver/AH1_Liver.markDup.bam
         
         track Liver_AH2
         parent Liver_RNAseq
+        type bam
         bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH2/RNA-Seq/Liver/AH2_Liver.markDup.bam
         
         track Liver_AH3
         parent Liver_RNAseq
+        type bam
         bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH3/RNA-Seq/Liver/AH3_Liver.markDup.bam
         
         track Liver_AH4
         parent Liver_RNAseq
+        type bam
         bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH4/RNA-Seq/Liver/AH4_Liver.markDup.bam
     
     
