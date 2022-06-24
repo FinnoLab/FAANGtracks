@@ -65,7 +65,7 @@ superTrack on
     shortLabel Liver ATAC
     longLabel Liver open chromatin regions
     visibility pack
-    labelOnFeature off
+    labelFields none
     exonArrows off
     exonNumbers off
 
@@ -250,7 +250,7 @@ superTrack on
     shortLabel Adipose ATAC
     longLabel Adipose open chromatin regions
     visibility pack
-    labelOnFeature off
+    labelFields none
     exonArrows off
     exonNumbers off
 
@@ -435,7 +435,7 @@ superTrack on
     shortLabel Lung ATAC
     longLabel Lung open chromatin regions
     visibility pack
-    labelOnFeature off
+    labelFields none
     exonArrows off
     exonNumbers off
 
