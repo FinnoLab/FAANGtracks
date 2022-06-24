@@ -98,6 +98,6 @@ superTrack on
 
         track Liver_H3K4me3_M
         parent Liver_H3K4me3
-        type bigWig -359 3712
+        type bigWig -68 7526
         color 120,235,204
         bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K4me3_Liver_combined.bw
