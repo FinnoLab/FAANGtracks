@@ -1115,3 +1115,188 @@ superTrack on
         type bigWig -332 3722
         color 120,235,204
         bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K27ac_Lamina_combined.bw
+        
+track Muscle
+shortLabel Muscle
+longLabel Muscle transcriptome and epigenome, derived from longissimus muscle
+superTrack on
+
+    track Muscle_chromHMM
+    type bigBed 12
+    parent Muscle
+    shortLabel Muscle States
+    longLabel Muscle chromatin state annotation
+    visibility pack
+    bigDataUrl bigBed/ChromHMM/Muscle_expanded.bigBed
+    itemRgb on
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
+    
+    track Muscle_RNAseq
+    compositeTrack on
+    parent Muscle
+    shortLabel Muscle RNA
+    longLabel RNA-seq data for Muscle in four animals
+    type bam
+    visibility full
+    pairEndsByName on
+    maxWindowToDraw 5000000
+    maxHeightPixels 100:30:12
+    autoScale group
+    doWiggle on
+    
+        track Muscle_AH1
+        parent Muscle_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH1/RNA-Seq/Longissimus/AH1_Longissimus.markDup.bam
+        
+        track Muscle_AH2
+        parent Muscle_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH2/RNA-Seq/Longissimus/AH2_Longissimus.markDup.bam
+        
+        track Muscle_AH3
+        parent Muscle_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH3/RNA-Seq/LongMuscle/AH3_LongMuscle.markDup.bam
+        
+        track Muscle_AH4
+        parent Muscle_RNAseq
+        type bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH4/RNA-Seq/LongMuscle/AH4_LongMuscle.markDup.bam
+    
+    
+
+    track Muscle_ATAC
+    compositeTrack on
+    parent Muscle
+    type bigBed 6 +
+    shortLabel Muscle ATAC
+    longLabel Muscle open chromatin regions
+    visibility pack
+    labelFields none
+    exonArrows off
+    exonNumbers off
+
+        track Muscle_ATAC_all
+        parent Muscle_ATAC on
+        type bigBed 6 +
+        shortLabel Muscle ATAC all
+        longLabel All open chromatin peaks in Muscle
+        bigDataUrl bigBed/ATAC/Muscle.bigBed
+
+        track Muscle_ATAC_specific
+        parent Muscle_ATAC
+        type bigBed 6 +
+        shortLabel Muscle ATAC specific
+        longLabel Muscle specific open chromatin peaks
+        bigDataUrl bigBed/ATAC/Muscle_specific.bigBed
+    
+    track Muscle_H3K4me1
+    parent Muscle
+    container multiWig
+    shortLabel Muscle H3K4me1
+    longLabel Muscle ChIP-seq data for H3K4me1
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Muscle_H3K4me1_F
+        parent Muscle_H3K4me1
+        type bigWig -93 245
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K4me1_Muscle_Combined.bigWig
+
+        track Muscle_H3K4me1_M
+        parent Muscle_H3K4me1
+        type bigWig -446 1118
+        color 120,235,204
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K4me1_Muscle_combined.bw
+        
+    track Muscle_H3K4me3
+    parent Muscle
+    container multiWig
+    shortLabel Muscle H3K4me3
+    longLabel Muscle ChIP-seq data for H3K4me3
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Muscle_H3K4me3_F
+        parent Muscle_H3K4me3
+        type bigWig -30 374
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K4me3_Muscle_Combined.bigWig
+
+        track Muscle_H3K4me3_M
+        parent Muscle_H3K4me3
+        type bigWig -74 6803
+        color 120,235,204
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K4me3_Muscle_combined.bw
+        
+    track Muscle_H3K27me3
+    parent Muscle
+    container multiWig
+    shortLabel Muscle H3K27me3
+    longLabel Muscle ChIP-seq data for H3K27me3
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Muscle_H3K27me3_F
+        parent Muscle_H3K27me3
+        type bigWig -190 198
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K27me3_Muscle_Combined.bigWig
+
+        track Muscle_H3K27me3_M
+        parent Muscle_H3K27me3
+        type bigWig -1297 3390
+        color 120,235,204
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K27me3_Muscle_combined.bw
+        
+    track Muscle_H3K27ac
+    parent Muscle
+    container multiWig
+    shortLabel Muscle H3K27ac
+    longLabel Muscle ChIP-seq data for H3K27ac
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    autoScale group
+    type bigWig -100 1000
+
+        track Muscle_H3K27ac_F
+        parent Muscle_H3K27ac
+        type bigWig -63 319
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K27ac_Muscle_Combined.bigWig
+
+        track Muscle_H3K27ac_M
+        parent Muscle_H3K27ac
+        type bigWig -332 3722
+        color 120,235,204
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K27ac_Muscle_combined.bw
