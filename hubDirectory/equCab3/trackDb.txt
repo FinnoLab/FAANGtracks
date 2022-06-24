@@ -19,7 +19,7 @@ superTrack on
     visibility squish
     bigDataUrl bigBed/ChromHMM/Liver_expanded.bigBed
     itemRgb on
-    labelOnFeature on
+    labelOnFeature off
     exonArrows off
     exonNumbers off
 
