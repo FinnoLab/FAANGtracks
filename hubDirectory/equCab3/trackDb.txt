@@ -74,3 +74,28 @@ superTrack on
         color 120,235,204
         bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K4me1_Liver_combined.bw
         
+    track Liver_H3K4me3
+    parent Liver
+    container multiWig
+    shortLabel Liver H3K4me3
+    longLabel Liver ChIP-seq data for H3K4me3
+    aggregate transparentOverlay
+    visibility full
+    maxHeightPixels 100:30:12
+    showSubtrackColorOnUi on
+    graphTypeDefault bar
+    maxWindowToQuery 1000000
+    smoothingWindow 4
+    type bigWig -100 1000
+
+        track Liver_H3K4me3_F
+        parent Liver_H3K4me3
+        type bigWig -108 375
+        color 255,128,128
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/MaresCombined/AH1_AH2_H3K4me3_Liver_Combined.bigWig
+
+        track Liver_H3K4me3_M
+        parent Liver_H3K4me3
+        type bigWig -359 3712
+        color 120,235,204
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K4me3_Liver_combined.bw
