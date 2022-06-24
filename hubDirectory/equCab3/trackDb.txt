@@ -25,6 +25,7 @@ superTrack on
     
     track Liver_RNAseq
     compositeTrack on
+    parent Liver
     shortLabel Liver RNA
     longLabel RNA-seq data for Liver in four animals
     type bam
