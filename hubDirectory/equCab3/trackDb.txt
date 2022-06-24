@@ -964,12 +964,12 @@ superTrack on
         track Lamina_AH1
         parent Lamina_RNAseq
         type bam
-        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH1/RNA-Seq/LeftVentricle/AH1_Lamina.markDup.bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH1/RNA-Seq/Lamina/AH1_Lamina.markDup.bam
         
         track Lamina_AH2
         parent Lamina_RNAseq
         type bam
-        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH2/RNA-Seq/LeftVentricle/AH2_Lamina.markDup.bam
+        bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/ECA_UCD_AH2/RNA-Seq/Lamina/AH2_Lamina.markDup.bam
         
         track Lamina_AH3
         parent Lamina_RNAseq
