@@ -29,6 +29,17 @@ superTrack on
     exonArrows off
     exonNumbers off
     
+    track Liver_CTCFLoop
+    type bigBed 3
+    parent Liver
+    shortLabel Liver CTCF Loops
+    longLabel Liver predicted chromatin loops using CTCF motifs
+    visibility pack
+    bigDataUrl bigBed/CTCF_loops/Liver.bigBed
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
+    
     track Liver_RNAseq
     compositeTrack on
     parent Liver
