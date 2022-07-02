@@ -225,6 +225,17 @@ superTrack on
     exonArrows off
     exonNumbers off
     
+    track Adipose_CTCFLoop
+    type bigBed 3
+    parent Adipose
+    shortLabel Adipose CTCF Loops
+    longLabel Adipose predicted chromatin loops using CTCF motifs
+    visibility pack
+    bigDataUrl bigBed/CTCF_loops/Adipose.bigBed
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
+    
     track Adipose_RNAseq
     compositeTrack on
     parent Adipose
@@ -406,6 +417,17 @@ superTrack on
     visibility pack
     bigDataUrl bigBed/ChromHMM/Lung_expanded.bigBed
     itemRgb on
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
+    
+    track Lung_CTCFLoop
+    type bigBed 3
+    parent Lung
+    shortLabel Lung CTCF Loops
+    longLabel Lung predicted chromatin loops using CTCF motifs
+    visibility pack
+    bigDataUrl bigBed/CTCF_loops/Lung.bigBed
     labelOnFeature off
     exonArrows off
     exonNumbers off
@@ -595,6 +617,17 @@ superTrack on
     exonArrows off
     exonNumbers off
     
+    track Brain_CTCFLoop
+    type bigBed 3
+    parent Brain
+    shortLabel Brain CTCF Loops
+    longLabel Brain predicted chromatin loops using CTCF motifs
+    visibility pack
+    bigDataUrl bigBed/CTCF_loops/Brain.bigBed
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
+    
     track Brain_RNAseq
     compositeTrack on
     parent Brain
@@ -776,6 +809,17 @@ superTrack on
     visibility pack
     bigDataUrl bigBed/ChromHMM/Heart_expanded.bigBed
     itemRgb on
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
+    
+    track Heart_CTCFLoop
+    type bigBed 3
+    parent Heart
+    shortLabel Heart CTCF Loops
+    longLabel Heart predicted chromatin loops using CTCF motifs
+    visibility pack
+    bigDataUrl bigBed/CTCF_loops/Heart.bigBed
     labelOnFeature off
     exonArrows off
     exonNumbers off
@@ -965,6 +1009,17 @@ superTrack on
     exonArrows off
     exonNumbers off
     
+    track Lamina_CTCFLoop
+    type bigBed 3
+    parent Lamina
+    shortLabel Lamina CTCF Loops
+    longLabel Lamina predicted chromatin loops using CTCF motifs
+    visibility pack
+    bigDataUrl bigBed/CTCF_loops/Lamina.bigBed
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
+    
     track Lamina_RNAseq
     compositeTrack on
     parent Lamina
@@ -1146,6 +1201,17 @@ superTrack on
     visibility pack
     bigDataUrl bigBed/ChromHMM/Muscle_expanded.bigBed
     itemRgb on
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
+    
+    track Muscle_CTCFLoop
+    type bigBed 3
+    parent Muscle
+    shortLabel Muscle CTCF Loops
+    longLabel Muscle predicted chromatin loops using CTCF motifs
+    visibility pack
+    bigDataUrl bigBed/CTCF_loops/Muscle.bigBed
     labelOnFeature off
     exonArrows off
     exonNumbers off
@@ -1335,6 +1401,17 @@ superTrack on
     exonArrows off
     exonNumbers off
     
+    track Ovary_CTCFLoop
+    type bigBed 3
+    parent Ovary
+    shortLabel Ovary CTCF Loops
+    longLabel Ovary predicted chromatin loops using CTCF motifs
+    visibility pack
+    bigDataUrl bigBed/CTCF_loops/Ovary.bigBed
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
+    
     track Ovary_RNAseq
     compositeTrack on
     parent Ovary
@@ -1480,6 +1557,17 @@ superTrack on
     visibility pack
     bigDataUrl bigBed/ChromHMM/Testis_expanded.bigBed
     itemRgb on
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
+    
+    track Testis_CTCFLoop
+    type bigBed 3
+    parent Testis
+    shortLabel Testis CTCF Loops
+    longLabel Testis predicted chromatin loops using CTCF motifs
+    visibility pack
+    bigDataUrl bigBed/CTCF_loops/Testis.bigBed
     labelOnFeature off
     exonArrows off
     exonNumbers off
