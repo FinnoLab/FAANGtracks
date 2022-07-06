@@ -47,7 +47,7 @@ superTrack on
     longLabel RNA-seq data for Liver in four animals
     type bam
     visibility full
-    pairEndsByName on
+    pairEndsByName off
     maxWindowToDraw 5000000
     maxHeightPixels 100:30:12
     autoScale group
@@ -243,7 +243,7 @@ superTrack on
     longLabel RNA-seq data for Adipose in four animals
     type bam
     visibility full
-    pairEndsByName on
+    pairEndsByName off
     maxWindowToDraw 5000000
     maxHeightPixels 100:30:12
     autoScale group
@@ -439,7 +439,7 @@ superTrack on
     longLabel RNA-seq data for Lung in four animals
     type bam
     visibility full
-    pairEndsByName on
+    pairEndsByName off
     maxWindowToDraw 5000000
     maxHeightPixels 100:30:12
     autoScale group
@@ -635,7 +635,7 @@ superTrack on
     longLabel RNA-seq data for Brain (parietal cortex) in four animals
     type bam
     visibility full
-    pairEndsByName on
+    pairEndsByName off
     maxWindowToDraw 5000000
     maxHeightPixels 100:30:12
     autoScale group
@@ -831,7 +831,7 @@ superTrack on
     longLabel RNA-seq data for Heart (left ventricle) in four animals
     type bam
     visibility full
-    pairEndsByName on
+    pairEndsByName off
     maxWindowToDraw 5000000
     maxHeightPixels 100:30:12
     autoScale group
@@ -1027,7 +1027,7 @@ superTrack on
     longLabel RNA-seq data for Lamina in four animals
     type bam
     visibility full
-    pairEndsByName on
+    pairEndsByName off
     maxWindowToDraw 5000000
     maxHeightPixels 100:30:12
     autoScale group
@@ -1223,7 +1223,7 @@ superTrack on
     longLabel RNA-seq data for Muscle in four animals
     type bam
     visibility full
-    pairEndsByName on
+    pairEndsByName off
     maxWindowToDraw 5000000
     maxHeightPixels 100:30:12
     autoScale group
@@ -1419,7 +1419,7 @@ superTrack on
     longLabel RNA-seq data for Ovary in two female animals
     type bam
     visibility full
-    pairEndsByName on
+    pairEndsByName off
     maxWindowToDraw 5000000
     maxHeightPixels 100:30:12
     autoScale group
@@ -1579,7 +1579,7 @@ superTrack on
     longLabel RNA-seq data for Testis in two male animals
     type bam
     visibility full
-    pairEndsByName on
+    pairEndsByName off
     maxWindowToDraw 5000000
     maxHeightPixels 100:30:12
     autoScale group
