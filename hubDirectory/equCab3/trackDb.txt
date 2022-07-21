@@ -6,6 +6,16 @@ visibility pack
 baseColorDefault genomicCodons
 bigDataUrl bigBed/genePred/faang_genePred.bb
 
+track ReGeneInteraction
+type bigInteract
+visibility full
+shortLabel RE-Gene
+longLabel Predicted RE and Gene interaction 
+spectrum on
+itemRgb on
+maxHeightPixels 300:150:20
+bigDataUrl bigBed/RE_Gene_pred/inter.bb
+
 track JP_TB_SNPs
 shortLabel JP TB SNPs
 longLabel SNPs data generated from 101 Japanese Thoroughbreds
