@@ -60,7 +60,8 @@ superTrack on
     pairEndsByName off
     maxWindowToDraw 5000000
     maxHeightPixels 100:30:12
-    autoScale group
+    autoScale off
+    viewLimits 0:500
     doWiggle on
     
         track Liver_AH1
@@ -256,7 +257,8 @@ superTrack on
     pairEndsByName off
     maxWindowToDraw 5000000
     maxHeightPixels 100:30:12
-    autoScale group
+    autoScale off
+    viewLimits 0:500
     doWiggle on
     
         track Adipose_AH1
@@ -452,7 +454,8 @@ superTrack on
     pairEndsByName off
     maxWindowToDraw 5000000
     maxHeightPixels 100:30:12
-    autoScale group
+    autoScale off
+    viewLimits 0:500
     doWiggle on
     
         track Lung_AH1
@@ -648,7 +651,8 @@ superTrack on
     pairEndsByName off
     maxWindowToDraw 5000000
     maxHeightPixels 100:30:12
-    autoScale group
+    autoScale off
+    viewLimits 0:500
     doWiggle on
     
         track Brain_AH1
@@ -844,7 +848,8 @@ superTrack on
     pairEndsByName off
     maxWindowToDraw 5000000
     maxHeightPixels 100:30:12
-    autoScale group
+    autoScale off
+    viewLimits 0:500
     doWiggle on
     
         track Heart_AH1
@@ -1040,7 +1045,8 @@ superTrack on
     pairEndsByName off
     maxWindowToDraw 5000000
     maxHeightPixels 100:30:12
-    autoScale group
+    autoScale off
+    viewLimits 0:500
     doWiggle on
     
         track Lamina_AH1
@@ -1236,7 +1242,8 @@ superTrack on
     pairEndsByName off
     maxWindowToDraw 5000000
     maxHeightPixels 100:30:12
-    autoScale group
+    autoScale off
+    viewLimits 0:500
     doWiggle on
     
         track Muscle_AH1
@@ -1432,7 +1439,8 @@ superTrack on
     pairEndsByName off
     maxWindowToDraw 5000000
     maxHeightPixels 100:30:12
-    autoScale group
+    autoScale off
+    viewLimits 0:500
     doWiggle on
     
         track Ovary_AH1
@@ -1592,7 +1600,8 @@ superTrack on
     pairEndsByName off
     maxWindowToDraw 5000000
     maxHeightPixels 100:30:12
-    autoScale group
+    autoScale off
+    viewLimits 0:500
     doWiggle on
     
         track Testis_AH3
