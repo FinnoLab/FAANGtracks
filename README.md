@@ -22,6 +22,8 @@ To adjust which tracks are shown under each tissue, click on the tissue name in 
 There are also two top-level tracks:
 
 1. FAANG gene annotation track  
-   This track includes combined annotation from Ensembl and RefSeq as well as novel genes and isoforms identified by the FAANG project
+   This track includes combined annotation from Ensembl and RefSeq as well as novel genes and isoforms identified by the FAANG project.
+   The Iso-seq dataset used to create this transcriptome included the following tissues:
+   Lamina, liver, left lung, left ventricle of heart, longissimus muscle, skin, parietal cortex, testis, and ovary
 3. SNPs from 101 Japanese Thoroughbred horses (Tozake et al., PMID:34362995)
 
