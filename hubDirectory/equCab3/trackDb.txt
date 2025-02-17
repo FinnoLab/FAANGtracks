@@ -1722,3 +1722,87 @@ superTrack on
         type bigWig -847 1841
         color 255,128,128
         bigDataUrl https://equinegenomics.uky.edu/data_warehouse/Equus_caballus/FAANG-ChIP-Seq/StallionsCombined/AH3_AH4_H3K27ac_Testis_combined.bw
+        
+track Bone
+shortLabel Bone
+longLabel Bone transcriptome and epigenome
+superTrack on
+
+    track Bone_chromHMM
+    type bigBed 12
+    parent Bone
+    shortLabel Bone States
+    longLabel Bone chromatin state annotation
+    visibility pack
+    bigDataUrl bigBed/ChromHMM/Bone_expanded.bigBed
+    itemRgb on
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
+    
+    track Bone_CTCFLoop
+    type bigBed 3
+    parent Bone
+    shortLabel Bone CTCF Loops
+    longLabel Bone predicted chromatin loops using CTCF motifs
+    visibility pack
+    bigDataUrl bigBed/CTCF_loops/Bone.bigBed
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
+    
+track Skin
+shortLabel Skin
+longLabel Skin transcriptome and epigenome
+superTrack on
+
+    track Skin_chromHMM
+    type bigBed 12
+    parent Skin
+    shortLabel Skin States
+    longLabel Skin chromatin state annotation
+    visibility pack
+    bigDataUrl bigBed/ChromHMM/Skin_expanded.bigBed
+    itemRgb on
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
+    
+    track Skin_CTCFLoop
+    type bigBed 3
+    parent Skin
+    shortLabel Skin CTCF Loops
+    longLabel Skin predicted chromatin loops using CTCF motifs
+    visibility pack
+    bigDataUrl bigBed/CTCF_loops/Skin.bigBed
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
+    
+track Spleen
+shortLabel Spleen
+longLabel Spleen transcriptome and epigenome
+superTrack on
+
+    track Spleen_chromHMM
+    type bigBed 12
+    parent Spleen
+    shortLabel Spleen States
+    longLabel Spleen chromatin state annotation
+    visibility pack
+    bigDataUrl bigBed/ChromHMM/Spleen_expanded.bigBed
+    itemRgb on
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
+    
+    track Spleen_CTCFLoop
+    type bigBed 3
+    parent Spleen
+    shortLabel Spleen CTCF Loops
+    longLabel Spleen predicted chromatin loops using CTCF motifs
+    visibility pack
+    bigDataUrl bigBed/CTCF_loops/Spleen.bigBed
+    labelOnFeature off
+    exonArrows off
+    exonNumbers off
